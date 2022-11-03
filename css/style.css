@@ -1,0 +1,157 @@
+/*COMMON*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    font-family: 'Lato', sans-serif;
+}
+#app{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(180deg, #019789 0%,#019789 15%, #d9dbd5 15%, #d9dbd5 100%);
+}
+#app > .container{
+    height: 90%;
+}
+
+/*STRUTTURA INTERNA*/
+.borderLightGrey{
+    border: 1px solid grey;
+}
+
+/*SEZIONE CONTACTBAR*/
+.contactBarSX, .contactBarDX{
+    background-color: lightgrey;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.contactBarSX{
+    justify-content: space-between;
+}
+.contactBarDX{
+    justify-content: flex-end;
+}
+.contactBarDX .icons, .contactBarSX .icons{
+    font-size: 20px;
+    color: grey;
+    padding: 0 5px;
+}
+.contactBarDownDX{
+    background-color: lightgrey;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactBarDownDX input{
+    width: 80%;
+    border: 1px solid white;
+}
+.contactBarDownDX .fa-face-smile, .contactBarDownDX .fa-paperclip, .contactBarDownDX .fa-camera{
+    height: 26px;
+    width: 26px;
+    padding: 4px;
+    background-color: white;
+    color: grey;
+}
+.contactBarDownDX .fa-face-smile{
+    border-radius: 10px 0 0 10px;
+}
+.contactBarDownDX .fa-paperclip, .contactBarDownDX .fa-camera{
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 5px;
+}
+.contactBarDownDX .fa-microphone{
+    height: 26px;
+    width: 26px;
+    padding: 5px 6px;
+    margin: 0 5px;
+    background-color: #019789;
+    color: white;
+    border-radius: 50%;
+}
+
+/*SEZIONE NOTIFICHE*/
+.notification{
+    background-color: lightblue;
+    height: 80px;
+}
+.searchBar{
+    height: 50px;
+    padding: 0 10px;
+    border-bottom: 1px solid grey;
+}
+.searchBar input{
+    margin: 10px 0;
+    width: 90%;
+}
+.contactsWrapper{
+    height: calc(100% - 200px);
+    overflow: hidden;
+}
+.contactList{
+    height: 100%;
+    overflow-y: auto;
+}
+
+/*NOTIFICHE MESSAGGI*/
+.notifyMessage {
+    width: 100%;
+    height: 70px;
+    padding: 8px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+.notifyMessage .notifyBellBcg {
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    margin-right: 10px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 22px;
+    color: lightblue;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/*STRUTTURA CONTATTI*/
+img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+/*STRUTTURA MESSAGGI*/
+.messageWrapper{
+    height: calc(100% - 140px);
+    background: url(../img/mine.jpg) repeat;
+    overflow: hidden;
+}
+.message{
+    position: relative;
+    min-width: 40%;
+    max-width: 60%;
+    font-size: 16px;
+    margin: 5px 5px;
+    padding: 15px 15px 20px;
+    border-radius: 10px;
+    background-color: white;
+}
+.chat{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.message.sent{
+    background-color: rgb(108, 226, 108);
+    align-self: flex-end;
+}
+
