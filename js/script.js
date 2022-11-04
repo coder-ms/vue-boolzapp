@@ -194,11 +194,11 @@ createApp({
         }
     },
     computed: {
-        filterContacts(){
-            let newArray = this.contact.filter((item) => {
+        filtereContacts(){
+            let newArray = this.contacts.filter((item) => {
                 const name = item.name.toLowerCase();
                 console.log(name);
-                console.log(this.contact);
+                console.log(this.contacts);
                 return name.includes(this.searchTerm.toLowerCase());
             })
             return newArray;
@@ -206,11 +206,11 @@ createApp({
     },
     methods: {
         getChat(id) {
-            this.currentChat = this.contacts.findIndex((item) => {
+            this.currentChat = this.contact.findIndex((item) => {
                 return item.id === id;
             })
             console.log(id);
         }
     },
 
-}).mount('#app')
+}).mount('#app');
