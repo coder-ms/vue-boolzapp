@@ -1,4 +1,4 @@
-const { createApp } = Vue
+const { createApp } = Vue;
 
 createApp({
     data() {
@@ -194,12 +194,14 @@ createApp({
         }
     },
     computed: {
-        filteredContacts(){
+        filterContacts(){
             let newArray = this.contact.filter((item) => {
                 const name = item.name.toLowerCase();
                 console.log(name);
+                console.log(this.contact);
                 return name.includes(this.searchTerm.toLowerCase());
             })
+            return newArray;
         }
     },
     methods: {
@@ -207,7 +209,7 @@ createApp({
             this.currentChat = this.contacts.findIndex((item) => {
                 return item.id === id;
             })
-            console.log(id)
+            console.log(id);
         }
     },
 
