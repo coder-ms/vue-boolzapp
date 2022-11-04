@@ -32,7 +32,7 @@
     justify-content: space-between;
 }
 .contactBarDX{
-    justify-content: flex-end;
+    justify-content:space-between;
 }
 .contactBarDX i, .contactBarSX i{
     font-size: 20px;

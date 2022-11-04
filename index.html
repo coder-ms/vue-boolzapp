@@ -52,7 +52,8 @@
                     <div class="contactsWrapper">
                         <!--LISTA CONTATTI-->
                         <div class="contactList">
-                            <div class="contact" :class="{'active': index === currentChat}" v-for="(item, index) in filteredContacts" :key="item.id" @click="setChat(item.id)">
+                            <div class="contact"  >
+                                <!--:class="{'active': index === currentChat}" v-for="(item, index) in filteredContacts" :key="item.id" @click="setChat(item.id)"-->
                                 <!--IMMAGINE PROFILO-->
                                 <img src="img/avatar_1.jpg" alt="">
                                 Tizio
@@ -68,8 +69,8 @@
                             <span class="p-1">
                                 <strong>{{contacts[currentChat].name}}</strong>
                                 <br>
-                                <span>{{contacts[currentChat].date}}</span>
-                                <small></small>
+                                <span></span>
+                                <small>{{contacts[currentChat].messages[contacts[currentChat].messages.length -1].date}}</small>
                             </span>
                         </div>
                         <div class="icons">
