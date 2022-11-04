@@ -5,6 +5,7 @@ createApp({
         return {
             myMessage: '',
             currentChat: 0,
+            searchTerm: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -194,7 +195,7 @@ createApp({
         }
     },
     computed: {
-        filtereContacts(){
+        filterContacts(){
             let newArray = this.contacts.filter((item) => {
                 const name = item.name.toLowerCase();
                 console.log(name);
@@ -210,6 +211,9 @@ createApp({
                 return item.id === id;
             })
             console.log(id);
+        },
+        setChat() {
+
         }
     },
 
