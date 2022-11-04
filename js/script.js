@@ -193,5 +193,22 @@ createApp({
             ]
         }
     },
+    computed: {
+        filteredContacts(){
+            let newArray = this.contact.filter((item) => {
+                const name = item.name.toLowerCase();
+                console.log(name);
+                return name.includes(this.searchTerm.toLowerCase());
+            })
+        }
+    },
+    methods: {
+        getChat(id) {
+            this.currentChat = this.contacts.findIndex((item) => {
+                return item.id === id;
+            })
+            console.log(id)
+        }
+    },
 
 }).mount('#app')

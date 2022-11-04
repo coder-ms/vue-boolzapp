@@ -47,12 +47,12 @@
                     </div>
                     <!--BARRA DI RICERCA CONTATTI-->
                     <div class="searchBar">
-                        <input type="text" placeholder="&#128269">
+                        <input type="text" placeholder="&#128269 Cerca o inizia una nuova chat">
                     </div>
                     <div class="contactsWrapper">
                         <!--LISTA CONTATTI-->
                         <div class="contactList">
-                            <div class="contact">
+                            <div class="contact" :class="{'active': index === currentChat}" v-for="(item, index) in filteredContacts" :key="item.id" @click="setChat(item.id)">
                                 <!--IMMAGINE PROFILO-->
                                 <img src="img/avatar_1.jpg" alt="">
                                 Tizio
@@ -63,6 +63,15 @@
                 <div class="col-12 col-sm-12 col-md-8 h-100 borderLightGrey">
                     <!--SEZIONE IMPOSTAZIONI SOPRA MESSAGGI-->
                     <div class="contactBarDX">
+                        <div class="user h-100 p-1 d-flex align-items-center">
+                            <img src="img/avatar_1.jpg" alt="ME">
+                            <span class="p-1">
+                                <strong>{{contacts[currentChat].name}}</strong>
+                                <br>
+                                <span>Ultimo accesso  </span>
+                                <small></small>
+                            </span>
+                        </div>
                         <div class="icons">
                             <i class="fas fa-search"></i>
                             <i class="fas fa-paperclip"></i>

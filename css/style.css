@@ -34,10 +34,10 @@
 .contactBarDX{
     justify-content: flex-end;
 }
-.contactBarDX .icons, .contactBarSX .icons{
+.contactBarDX i, .contactBarSX i{
     font-size: 20px;
     color: grey;
-    padding: 0 5px;
+    margin: 0 10px;   
 }
 .contactBarDownDX{
     background-color: lightgrey;
@@ -80,6 +80,19 @@
     background-color: lightblue;
     height: 80px;
 }
+.notifyMessage .notifyBellBcg {
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 22px;
+    color: lightblue;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/*SEZIONE BARRA DI RICERCA*/
 .searchBar{
     height: 50px;
     padding: 0 10px;
@@ -107,18 +120,7 @@
     justify-content: flex-start;
     flex-wrap: wrap;
 }
-.notifyMessage .notifyBellBcg {
-    height: 60px;
-    width: 60px;
-    border: 1px solid black;
-    margin-right: 10px;
-    line-height: 60px;
-    text-align: center;
-    font-size: 22px;
-    color: lightblue;
-    background-color: #fff;
-    border-radius: 50%;
-}
+
 
 /*STRUTTURA CONTATTI*/
 img{
@@ -154,4 +156,3 @@ img{
     background-color: rgb(108, 226, 108);
     align-self: flex-end;
 }
-
