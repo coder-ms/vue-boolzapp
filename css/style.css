@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid grey;
 }
 .contactBarSX, .contactBarDX{
     background-color: lightgrey;
@@ -146,7 +147,7 @@ img{
     min-width: 40%;
     max-width: 60%;
     font-size: 16px;
-    margin: 5px 5px;
+    margin: 10px;
     padding: 15px 15px 20px;
     border-radius: 10px;
     background-color: white;

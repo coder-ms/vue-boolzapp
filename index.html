@@ -58,11 +58,12 @@
                                 <div class="imageElenco">
                                     <img :src="'img/avatar' + contacts[currentChat].avatar +'.jpg'" alt="">
                                     <strong>{{contacts[currentChat].name}}</strong>
+                                    &nbsp;
+                                    {{contacts[currentChat].messages[contacts[currentChat].messages.length -1].message}} 
                                 </div>
                                 <div class="p-1">
-                                    <span>{{contacts[currentChat].messages[contacts[currentChat].messages.length -1].message}} 
-                                    &nbsp;
-                                    <small>{{contacts[currentChat].messages[contacts[currentChat].messages.length -1].date}}</small></span>
+                                    <br>
+                                    <span><small>{{contacts[currentChat].messages[contacts[currentChat].messages.length -1].date}}</small></span>
                                 </div>
                                 
                             </div>
