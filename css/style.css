@@ -22,6 +22,11 @@
 }
 
 /*SEZIONE CONTACTBAR*/
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .contactBarSX, .contactBarDX{
     background-color: lightgrey;
     height: 70px;

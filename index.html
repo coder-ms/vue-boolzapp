@@ -55,8 +55,16 @@
                             <div class="contact"  >
                                 <!--:class="{'active': index === currentChat}" v-for="(item, index) in filteredContacts" :key="item.id" @click="setChat(item.id)"-->
                                 <!--IMMAGINE PROFILO-->
-                                <img src="img/avatar_1.jpg" alt="">
-                                Tizio
+                                <div class="imageElenco">
+                                    <img :src="'img/avatar' + contacts[currentChat].avatar +'.jpg'" alt="">
+                                    <strong>{{contacts[currentChat].name}}</strong>
+                                </div>
+                                <div class="p-1">
+                                    <span>{{contacts[currentChat].messages[contacts[currentChat].messages.length -1].message}} 
+                                    &nbsp;
+                                    <small>{{contacts[currentChat].messages[contacts[currentChat].messages.length -1].date}}</small></span>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -69,8 +77,7 @@
                             <span class="p-1">
                                 <strong>{{contacts[currentChat].name}}</strong>
                                 <br>
-                                <span></span>
-                                <small>{{contacts[currentChat].messages[contacts[currentChat].messages.length -1].date}}</small>
+                                <small>Ultimo accesso {{contacts[currentChat].messages[contacts[currentChat].messages.length -1].date}}</small>
                             </span>
                         </div>
                         <div class="icons">
