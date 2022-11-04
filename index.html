@@ -52,8 +52,8 @@
                     <div class="contactsWrapper">
                         <!--LISTA CONTATTI-->
                         <div class="contactList">
-                            <div class="contact"  >
-                                <!--:class="{'active': index === currentChat}" v-for="(item, index) in filteredContacts" :key="item.id" @click="setChat(item.id)"-->
+                            <div class="contact" :class="{'active': index === currentChat}" v-for="(item, index) in filteredContacts" :key="item.id" @click="setChat(item.id)" >
+                                <!---->
                                 <!--IMMAGINE PROFILO-->
                                 <div class="imageElenco">
                                     <img :src="'img/avatar' + contacts[currentChat].avatar +'.jpg'" alt="">
