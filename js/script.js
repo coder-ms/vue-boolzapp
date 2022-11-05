@@ -206,14 +206,36 @@ createApp({
         }
     },
     methods: {
+        setChat(id) {
+            this.currentChat = this.contacts.findIndex((item) => item.id === id)
+        },
         getChat(id) {
             this.currentChat = this.contact.findIndex((item) => {
                 return item.id === id;
             })
             console.log(id);
         },
-        setChat() {
-
+        sendMessage() {
+            if(!this.newMessage) return;
+            const d = new Date();
+            let newDate = d.toDateString();
+            const newSentMessage = {
+                date: newDate,
+                message: this.newMessage,
+                status: 'sent'
+            }
+            this.contacts[this.currentChat].messages.push(newSentMessage);
+            this.newMessage = '';
+            setTimeout(() =>{
+                const d  = new Date();
+                let newDate = d.toDateString();
+                const newSentMessage = {
+                    date: newDate,
+                    message: 'Ok',
+                    status: 'received'
+                }
+                this.contacts[this.currentChat].messages.push(newSentMessage);
+            }, 2500);
         }
     },
 

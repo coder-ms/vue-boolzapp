@@ -47,7 +47,7 @@
                     </div>
                     <!--BARRA DI RICERCA CONTATTI-->
                     <div class="searchBar">
-                        <input type="text" placeholder="&#128269 Cerca o inizia una nuova chat" v-bind:value="searchTerm">
+                        <input type="text" placeholder="&#128269 Cerca o inizia una nuova chat" v-bind:value="searchTerm"  @keyup="findContact">
                     </div>
                     <div class="contactsWrapper">
                         <!--LISTA CONTATTI-->
