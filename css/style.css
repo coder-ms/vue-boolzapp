@@ -150,7 +150,7 @@ img{
     background: url(../img/mine.jpg) repeat;
     overflow: hidden;
 }
-.message{
+.messageStruct{
     position: relative;
     min-width: 40%;
     max-width: 60%;
@@ -166,7 +166,7 @@ img{
     align-items: flex-start;
     justify-content: flex-start;
 }
-.message.sent{
+.messageStruct.sent{
     background-color: rgb(108, 226, 108);
     align-self: flex-end;
 }
@@ -180,7 +180,6 @@ img{
 .contact .contact-pic img{
     margin: 5px;
 }
-
 
 .contact .contactInfo{
     width: 100%;
